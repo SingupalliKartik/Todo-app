@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
 
 class Tasktile extends StatelessWidget {
-  final bool? ischecked;
+  String  tasktitle;
+   bool? ischecked = false;
   final String? text;
-  final  Function? checkboscall;
-  final Function? longpresscal;
+  final Function(bool?)? checkboscall;
+  final Function() longpresscal;
 
   Tasktile(
-      {this.ischecked = false,
+      {required this.ischecked ,
       this.text,
       required this.checkboscall,
-      required this.longpresscal});
+      required this.longpresscal,
+        required this.tasktitle
+      });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onLongPress: longpresscal!(),
+      onLongPress:  longpresscal,
       title: Text(
-        "this is a task",
+        tasktitle,
         style: TextStyle(
             decoration: ischecked == true ? TextDecoration.lineThrough : null),
       ),
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
         value: ischecked,
-        onChanged: checkboscall!(),
+        onChanged: checkboscall,
       ),
     );
   }

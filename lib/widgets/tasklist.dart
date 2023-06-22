@@ -12,7 +12,8 @@ class Tasklist extends StatelessWidget {
           itemBuilder: (context, index) {
             final task = taskData.tasks[index];
             return Tasktile(
-              text: taskData.tasks[index].name,
+              // text: taskData.tasks[index].name,
+              tasktitle: task.name.toString(),
               ischecked: taskData.tasks[index].isDone,
               checkboscall: (checkboxstate) {
                 taskData.updateTask(taskData.tasks[index]);
@@ -20,6 +21,7 @@ class Tasklist extends StatelessWidget {
               longpresscal: () {
                 taskData.deltask(task);
               },
+
             );
           },
           itemCount: taskData.taskCount,

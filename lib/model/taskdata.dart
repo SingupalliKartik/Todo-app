@@ -4,16 +4,16 @@ import 'package:collection/collection.dart';
 
 class TaskData extends ChangeNotifier {
   List<task> _tasks = [
-    task(name: "kartik 2"),
-    task(name: "kartik 3"),
+    // task(name: "kartik 2"),
+    // task(name: "kartik 3"),
   ];
 
   int get taskCount {
     return _tasks.length;
   }
 
-  void addtask(String newtasklist) {
-    final uptask = task(name: newtasklist);
+  void addtask(String newtasktitle) {
+    final uptask = task(name: newtasktitle);
     _tasks.add(uptask);
     notifyListeners();
   }

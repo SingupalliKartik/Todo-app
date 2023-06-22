@@ -11,7 +11,7 @@ class TaskScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(0xff1AD2C3),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
@@ -23,7 +23,7 @@ class TaskScreen extends StatelessWidget {
                     Navigator.pop(context);
                   }));
         },
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Color(0xff1AD2C3),
         child: Icon(Icons.add),
       ),
       body: Column(
@@ -39,7 +39,7 @@ class TaskScreen extends StatelessWidget {
                   child: Icon(
                     Icons.list,
                     size: 30.0,
-                    color: Colors.lightBlueAccent,
+                    color:Color(0xff1AD2C3),
                   ),
                   backgroundColor: Colors.white,
                   radius: 30.0,
@@ -58,7 +58,7 @@ class TaskScreen extends StatelessWidget {
                   "${Provider.of<TaskData>(context).taskCount} TASK",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 20,
                   ),
                 ),
               ],
